@@ -1,0 +1,68 @@
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.csproj.AssemblyReference.cache
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.AssemblyInfoInputs.cache
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.AssemblyInfo.cs
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\appsettings.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.exe
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.deps.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.runtimeconfig.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.pdb
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets\msbuild.TarefasAleatoria.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets\msbuild.build.TarefasAleatoria.props
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TarefasAleatoria.props
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TarefasAleatoria.props
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\scopedcss\bundle\TarefasAleatoria.styles.css
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasA.9C5A66DA.Up2Date
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\refint\TarefasAleatoria.dll
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.pdb
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.genruntimeconfig.cache
+C:\Users\Nicolas\source\repos\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\ref\TarefasAleatoria.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\appsettings.Development.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\appsettings.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.staticwebassets.endpoints.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.exe
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.deps.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.runtimeconfig.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\TarefasAleatoria.pdb
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.csproj.AssemblyReference.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.GeneratedMSBuildEditorConfig.editorconfig
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.AssemblyInfoInputs.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.AssemblyInfo.cs
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.csproj.CoreCompileInputs.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.MvcApplicationPartsAssemblyInfo.cs
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.MvcApplicationPartsAssemblyInfo.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\scopedcss\bundle\TarefasAleatoria.styles.css
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.build.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.development.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\swae.build.ex.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasA.9C5A66DA.Up2Date
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\refint\TarefasAleatoria.dll
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.pdb
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\TarefasAleatoria.genruntimeconfig.cache
+E:\0 - ARQUIVOS\1 - IMPORTANTE\TarefasAleatoria\TarefasAleatoria\obj\Debug\net8.0\ref\TarefasAleatoria.dll

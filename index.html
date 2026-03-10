@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Tarefas a fazer</title>
+</head>
+<style>
+    body {
+        font-family: lexend;
+        margin: 1%;
+        margin-top: 20px;
+        background-color: #274c81;
+    }
+
+    h1 {
+        font-size: 80px;
+        color: #ffffff;
+        font-family: cream cake;
+    }
+
+    #btnEditar {
+        background-color: #5e9fc4;
+        border: 0px;
+    }
+
+    #btnExcluir {
+        background-color: #275f80;
+        border: 0px;
+    }
+</style>
+
+<body>
+    <br>
+    <h1 class="text-center">Gerenciador de Tarefas</h1>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Eu vou sugerir as tarefas com base no seu tempo!</h5>
+            <div class="form-group">
+                <label for="inputTempo">Tempo (em min):</label>
+                <input type="number" class="form-control" id="inputTempo" placeholder="Insira seu tempo">
+            </div>
+            <button id="btnEditar" class="btn btn-primary" onclick="sugerirTarefa()">Sugerir Tarefa</button>
+            <div class="mt-3" id="resultadoTarefa"></div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Lista de Tarefas Salvas</h5>
+            <button id="btnEditar" class="btn btn-success mb-3" onclick="listarTarefas()">Atualizar Tarefas</button>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Vídeo</th>
+                        <th>Duração da tarefa</th>
+                        <th>Operações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaTarefas">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Inserir/Editar Tarefas</h5>
+
+            <div class="form-group">
+                <label for="tarefaId">ID da Tarefa</label>
+                <input type="text" class="form-control" id="tarefaId" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="tarefaNome">Nome da Tarefa</label>
+                <input type="text" class="form-control" id="tarefaNome">
+            </div>
+
+            <div class="form-group">
+                <label for="tarefaDescricao">Descrição da Tarefa</label>
+                <textarea class="form-control" id="tarefaDescricao"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tarefaYoutube">Vídeo</label>
+                <select class="form-control" id="tarefaYoutube" onchange="mostrarInput()">
+                    <option value="Sem Video">Sem Vídeo</option>
+                    <option value="Video">Com Vídeo</option>
+                </select>
+            </div>
+            <div class="form-group" id="linkVideoDiv" style="display: none;">
+                <label for="tarefaYoutube">Vídeo do Youtube</label>
+                <input type="text" class="form-control" id="tarefaYoutubeLink" placeholder="Link do vídeo">
+            </div>
+
+            <!-- Função para mostrar a opção de colocar o Link do Vídeo -->
+            <script>
+                function mostrarInput() {
+                    var selectElement = document.getElementById("tarefaYoutube");
+                    var linkDiv = document.getElementById("linkVideoDiv");
+
+                    if (selectElement.value === "Video") {
+                        linkDiv.style.display = "block"; // Mostrar
+                    } else {
+                        linkDiv.style.display = "none";  // Esconder
+                    }
+                }
+            </script>
+
+            <div class="form-group">
+                <label for="tarefaTempo">Duração da Tarefa</label>
+                <input type="number" class="form-control" id="tarefaTempo">
+            </div>
+
+            <button id="btnEditar" class="btn btn-primary" onclick="salvarTarefa()">Salvar Tarefa</button>
+        </div>
+    </div>
+
+    <script>
+
+        const apiBaseUrl = "https://localhost:7141";
+
+        function sugerirTarefa() {
+            const tempo = parseFloat(document.getElementById('inputTempo').value);
+            let tarefasExibidas = [];
+            let tempoRestante = tempo;
+
+            if (!tempo || tempo <= 0) {
+                document.getElementById('resultadoTarefa').innerHTML = "<p><strong>Informe um valor positivo diferente de zero!</strong></p>";
+                return;
+            }
+
+            fetch(`${apiBaseUrl}/executarTarefas/Sugerir/${tempoRestante}`)
+                .then(response => response.json())
+                .then(tarefas => {
+                    const resultadoDiv = document.getElementById('resultadoTarefa');
+                    resultadoDiv.innerHTML = "";
+
+                    if (typeof tarefas === "string" && tarefas.includes("Nenhuma tarefa encontrada")) {
+                        resultadoDiv.innerHTML = "<p><strong>Tempo insuficiente para fazer as tarefas</strong></p>";
+                        return;
+                    }
+
+                    // Exibir tarefas sugeridas
+                    tarefas.forEach(tarefa => {
+                        resultadoDiv.innerHTML += `
+                    <h5>Tarefa Sugerida:</h5>
+                    <p><strong>ID:</strong> ${tarefa.trfId}</p>
+                    <p><strong>NOME:</strong> ${tarefa.trfNome}</p>
+                    <p><strong>DESCRIÇÃO:</strong> ${tarefa.trfDescricao}</p>
+                    <p><strong>DURAÇÃO DA TAREFA:</strong> ${tarefa.trfTempo} minutos</p>
+                    <p><strong>VÍDEO:</strong> ${tarefa.trfYoutube.includes("Sem Video") ? 'Sem Vídeo' : `<a target="_blank" href="${tarefa.trfYoutube}">Video complementar</a>`}</p><br>
+                `;
+                        tempoRestante -= tarefa.trfTempo;
+                    });
+
+                    if (tempoRestante > 0) {
+                        sugerirTarefaComTempoRestante(tempoRestante);
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+
+        
+        function sugerirTarefaComTempoRestante(tempoRestante) {
+            fetch(`${apiBaseUrl}/executarTarefas/Sugerir/${tempoRestante}`)
+                .then(response => response.json())
+                .then(tarefas => {
+                    const resultadoDiv = document.getElementById('resultadoTarefa');
+
+                    tarefas.forEach(tarefa => {
+
+                        if (!tarefasExibidas.some(t => t.trfId === tarefa.trfId)) {
+
+                            tarefasExibidas.push(tarefa);
+
+                            resultadoDiv.innerHTML += `
+                        <h5>Tarefa Sugerida:</h5>
+                        <p><strong>ID:</strong> ${tarefa.trfId}</p>
+                        <p><strong>NOME:</strong> ${tarefa.trfNome}</p>
+                        <p><strong>DESCRIÇÃO:</strong> ${tarefa.trfDescricao}</p>
+                        <p><strong>DURAÇÃO DA TAREFA:</strong> ${tarefa.trfTempo} minutos</p>
+                        <p><strong>VÍDEO:</strong> ${tarefa.trfYoutube.includes("Sem Video") ? 'Sem Vídeo' : `<a target="_blank" href="${tarefa.trfYoutube}">Video complementar</a>`}</p><br>
+                    `;
+
+                            tempoRestante -= tarefa.trfTempo;
+                        }
+                    });
+
+                    if (tempoRestante > 0) {
+                        sugerirTarefaComTempoRestante(tempoRestante);
+                    }
+
+                }).catch(error => console.error('Erro:', error));
+        }
+
+        function listarTarefas() {
+            fetch(`${apiBaseUrl}/executarTarefas`)
+                .then(response => response.json())
+                .then(tarefas => {
+
+                    const lista = document.getElementById('listaTarefas');
+                    lista.innerHTML = '';
+
+                    tarefas.forEach(tarefa => {
+
+                        if (tarefa.trfYoutube.includes("Sem Video")) {
+
+                            lista.innerHTML += `
+                            <tr>
+                                <td>${tarefa.trfId}</td>
+                                <td>${tarefa.trfNome}</td>
+                                <td>${tarefa.trfDescricao}</td>
+                                <td>Sem Vídeo</td>
+                                <td>${tarefa.trfTempo} min. </td>
+                                <td>
+                                    <button id="btnEditar" class="btn btn-info" onclick="editarTarefa(${tarefa.trfId})">Editar</button>
+                                    <button id="btnExcluir"class="btn btn-danger" onclick="excluirTarefa(${tarefa.trfId})">Excluir</button>
+                                </td>
+                            </tr>
+                        `;
+
+                        } else {
+
+                            lista.innerHTML += `
+                            <tr>
+                                <td>${tarefa.trfId}</td>
+                                <td>${tarefa.trfNome}</td>
+                                <td>${tarefa.trfDescricao}</td>
+                                <td><a href="${tarefa.trfYoutube}" target="_blank">Vídeo Complementar</a></td>
+                                <td>${tarefa.trfTempo} min.</td>
+                                <td>
+                                    <button id="btnEditar" class="btn btn-info" onclick="editarTarefa(${tarefa.trfId})">Editar</button>
+                                    <button id="btnExcluir" class="btn btn-danger" onclick="excluirTarefa(${tarefa.trfId})">Excluir</button>
+                                </td>
+                            </tr>
+                        `;
+
+                        }
+                    });
+                }).catch(error => console.error('Erro:', error));
+
+        }
+
+        function salvarTarefa() {
+
+            const tarefaId = document.getElementById('tarefaId').value;
+            const tarefaNome = document.getElementById('tarefaNome').value;
+            const tarefaDescricao = document.getElementById('tarefaDescricao').value;
+            const tarefaYoutube = document.getElementById('tarefaYoutube').value === "Sem Video" ? "Sem Video" : document.getElementById('tarefaYoutubeLink').value;
+            const tarefaTempo = document.getElementById('tarefaTempo').value;
+
+            const tarefa = {
+
+                trfNome: tarefaNome,
+                trfDescricao: tarefaDescricao,
+                trfYoutube: tarefaYoutube,
+                trfTempo: tarefaTempo
+
+            };
+
+            if (tarefaId) {
+                // Editar receita existente
+                fetch(`${apiBaseUrl}/executarTarefas/${tarefaId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(tarefa)
+                })
+                    .then(() => {
+
+                        alert("Tarefa Atualizada com Sucesso!!!");
+                        listarTarefas();
+                        limparFormulario();
+
+                    })
+                    .catch(error => console.error('Erro: ', error));
+            } else {
+                // Inserir tarefa Nova
+                fetch(`${apiBaseUrl}/executarTarefas/Inserir`, {
+
+                    method: 'POST',
+                    headers: {
+
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(tarefa)
+                })
+                    .then(() => {
+
+                        alert("Tarefa Inserida com Sucesso!!!");
+                        listarTarefas();
+                        limparFormulario();
+
+                    })
+                    .catch(error => console.error('Erro: ', error));
+            }
+        }
+
+        function editarTarefa(id) {
+            fetch(`${apiBaseUrl}/executarTarefas/Editar/${id}`)
+                .then(response => response.json())
+                .then(tarefa => {
+                    document.getElementById('tarefaId').value = tarefa.trfId;
+                    document.getElementById('tarefaNome').value = tarefa.trfNome;
+                    document.getElementById('tarefaDescricao').value = tarefa.trfDescricao;
+                    document.getElementById('tarefaTempo').value = tarefa.trfTempo;
+
+                    if (tarefa.trfYoutube !== "Sem Video") {
+                        document.getElementById('tarefaYoutube').value = "Video";
+                        document.getElementById('tarefaYoutubeLink').value = tarefa.trfYoutube;
+                        document.getElementById('linkVideoDiv').style.display = "block";
+                    } else {
+                        document.getElementById('tarefaYoutube').value = "Sem Video";
+                        document.getElementById('linkVideoDiv').style.display = "none";
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+
+
+        function limparFormulario() {
+            document.getElementById('tarefaId').value = '';
+            document.getElementById('tarefaNome').value = '';
+            document.getElementById('tarefaDescricao').value = '';
+            document.getElementById('tarefaYoutube').value = "Sem Video";
+            mostrarInput();
+            document.getElementById('tarefaYoutubeLink').value = '';
+            document.getElementById('tarefaTempo').value = '';
+        }
+
+        function excluirTarefa(id) {
+            if (confirm('Tem certeza que deseja excluir essa tarefa?')) {
+                fetch(`${apiBaseUrl}/executarTarefas/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(() => {
+                        alert('Tarefa excluída com sucesso!');
+                        listarTarefas();
+                    })
+                    .catch(error => console.error('Erro:', error));
+            }
+        }
+    </script>
+</body>
+
+</html>

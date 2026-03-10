@@ -1,0 +1,99 @@
+[
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "ListarTarefas",
+    "RelativePath": "executarTarefas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "Put",
+    "RelativePath": "executarTarefas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tarefaAtualizada",
+        "Type": "TarefasAleatoria.atributoTarefas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "Delete",
+    "RelativePath": "executarTarefas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "GetReceitaEditar",
+    "RelativePath": "executarTarefas/Editar/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetTarefaEditar"
+  },
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "Post",
+    "RelativePath": "executarTarefas/Inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novaTarefa",
+        "Type": "TarefasAleatoria.atributoTarefas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TarefasAleatoria.Controllers.executarTarefas",
+    "Method": "GetAtividadeSugerida",
+    "RelativePath": "executarTarefas/Sugerir/{tempo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tempo",
+        "Type": "System.Single",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetAtividadeSugerida"
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TarefasAleatoria",
+    "version": "1.0"
+  },
+  "paths": {
+    "/executarTarefas/Sugerir/{tempo}": {
+      "get": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "operationId": "GetAtividadeSugerida",
+        "parameters": [
+          {
+            "name": "tempo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/executarTarefas/Editar/{id}": {
+      "get": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "operationId": "GetTarefaEditar",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/executarTarefas": {
+      "get": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/executarTarefas/Inserir": {
+      "post": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/executarTarefas/{id}": {
+      "put": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/atributoTarefas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "executarTarefas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "atributoTarefas": {
+        "type": "object",
+        "properties": {
+          "trfId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trfNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "trfDescricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "trfYoutube": {
+            "type": "string",
+            "nullable": true
+          },
+          "trfTempo": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

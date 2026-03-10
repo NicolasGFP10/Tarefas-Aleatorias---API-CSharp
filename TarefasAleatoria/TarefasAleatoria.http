@@ -1,0 +1,6 @@
+@TarefasAleatoria_HostAddress = http://localhost:5288
+
+GET {{TarefasAleatoria_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
